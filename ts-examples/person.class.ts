@@ -1,3 +1,13 @@
+/*
+===============================================================================
+; Title:  person.class.ts
+; Author: Ace Baugh
+; Date:   03 January 2023
+; Description: This is a class that implements an interface.
+;==============================================================================
+*/
+
+// Import the IPerson interface
 import { IPerson } from './person.interface';
 
 // Person class implements IPerson interface
