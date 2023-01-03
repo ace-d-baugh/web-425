@@ -5,14 +5,19 @@
   Description: This is the main component for the profile-app.
 -->
 
+<!-- A navigation bar is a navigation header that is placed at the top of the page. -->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark rjustify">
   <ul class="navbar-nav">
+    <!-- The active class is used to indicate the current page in the navigation bar. -->
+    <!-- Home link -->
     <li class="nav-item active">
       <a class="nav-link" href="#">Home</a>
     </li>
+    <!-- About link -->
     <li class="nav-item">
       <a class="nav-link" href="#">About</a>
     </li>
+    <!-- Contact Us link -->
     <li class="nav-item">
       <a class="nav-link" href="#">Contact Us</a>
     </li>
@@ -20,17 +25,22 @@
 </nav>
 
 <div class="container">
+  <!-- give space -->
   <br><br>
+  <!-- Header Content -->
   <div class="row">
     <div class="col-sm-12">
       <h2>{{ assignment }}</h2>
     </div>
   </div>
+  <!-- row of content -->
   <div class="row">
+    <!-- Left half -->
     <div class="col-sm-6">
       <!-- Profile Image -->
       <app-my-image></app-my-image>
     </div>
+    <!-- Right half -->
     <div class="col-sm-6">
       <!-- Profile Information -->
       <app-my-details></app-my-details>
