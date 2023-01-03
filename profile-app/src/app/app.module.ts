@@ -24,4 +24,5 @@ import { MyDetailsComponent } from './my-details/my-details.component';
   providers: [],
   bootstrap: [AppComponent],
 })
+// export app module
 export class AppModule {}
