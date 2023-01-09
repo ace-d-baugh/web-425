@@ -41,11 +41,11 @@ export class ComposerListComponent implements OnInit {
   constructor() {
     // create array of composers
     this.composers = [
-      new Composer('Ludwig van Beethoven', 'Classical'),
-      new Composer('Wolfgang Amadeus Mozart', 'Classical'),
-      new Composer('Johann Sebastian Bach', 'Classical'),
-      new Composer('Joseph Haydn', 'Classical'),
-      new Composer('Franz Schubert', 'Classical'),
+      new Composer('Adam Young', 'Synth Pop'),
+      new Composer('Ashleigh Ball', 'Indie Rock'),
+      new Composer('Brady Parks', 'Indie Folk'),
+      new Composer('David Gahan', 'Synth Pop'),
+      new Composer('Isao Tomita', 'Electronic'),
     ];
   }
 
