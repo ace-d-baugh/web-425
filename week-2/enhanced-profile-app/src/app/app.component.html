@@ -1,7 +1,7 @@
 <!--
   Title: app.component.html
   Author: Ace Baugh
-  Date: 03 January 2023
+  Date: 09 January 2023
   Description: This is the main component for the profile-app.
 -->
 
@@ -34,7 +34,7 @@
     </div>
   </div>
   <!-- row of content -->
-  <div class="row">
+  <div class="row" *ngIf="isLoggedIn; else showError">
     <!-- Left half -->
     <div class="col-sm-4">
       <!-- Profile Image -->
@@ -46,4 +46,12 @@
       <app-my-details></app-my-details>
     </div>
   </div>
+
+  <ng-template #showError>
+    <div class="row">
+      <div class="col-sm-12">
+        <h4 class="alert alert-danger">You are not authorized to view this content!</h4>
+      </div>
+    </div>
+  </ng-template>
 </div>
