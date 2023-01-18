@@ -15,5 +15,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'composer-app';
+  title = 'Exercise 3.2 - Passing Data to Routes, Part 1';
 }
