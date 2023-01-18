@@ -52,6 +52,6 @@ export class Composer {
       }
     }
     // if no match, return null
-    return null;
+    return {} as IComposer;
   }
 }
