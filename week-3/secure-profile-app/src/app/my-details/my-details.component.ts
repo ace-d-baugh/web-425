@@ -2,7 +2,7 @@
 ============================================
 , Title: my-details.component.ts
 ; Author: Ace Baugh
-; Date: 09 January 2023
+; Date: 18 January 2023
 ; Description: This component is the my-details component for the profile-app app.
 +===========================================
 */
