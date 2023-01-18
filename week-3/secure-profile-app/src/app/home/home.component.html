@@ -8,4 +8,56 @@
 -->
 
 <!-- This is the home component for the profile-app. -->
-<p>home works!</p>
+<!-- A navigation bar is a navigation header that is placed at the top of the page. -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark rjustify">
+  <ul class="navbar-nav">
+    <!-- The active class is used to indicate the current page in the navigation bar. -->
+    <!-- Home link -->
+    <li class="nav-item active">
+      <a class="nav-link" href="#">Home</a>
+    </li>
+    <!-- About link -->
+    <li class="nav-item">
+      <a class="nav-link" href="#">About</a>
+    </li>
+    <!-- Contact Us link -->
+    <li class="nav-item">
+      <a class="nav-link" href="#">Contact Us</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="container">
+  <!-- give space -->
+  <br><br>
+  <!-- Header Content -->
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Exercise 3.3 - Passing Data to Routes, Part 2</h2>
+    </div>
+  </div>
+
+  <br><br>
+
+  <!-- row of content -->
+  <div class="row" *ngIf="isLoggedIn; else showError">
+    <!-- Left half -->
+    <div class="col-sm-4">
+      <!-- Profile Image -->
+      <app-my-image></app-my-image>
+    </div>
+    <!-- Right half -->
+    <div class="col-sm-8">
+      <!-- Profile Information -->
+      <app-my-details></app-my-details>
+    </div>
+  </div>
+
+  <ng-template #showError>
+    <div class="row">
+      <div class="col-sm-12">
+        <h4 class="alert alert-danger">You are not authorized to view this content!</h4>
+      </div>
+    </div>
+  </ng-template>
+</div>

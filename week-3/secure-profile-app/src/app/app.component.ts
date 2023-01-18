@@ -20,6 +20,5 @@ import { Component } from '@angular/core';
 // export the component class
 export class AppComponent {
   // variables to pass to the whole app
-  isLoggedIn: boolean = true;
   assignment: string = `Assignment 2.3 - Data Binding`;
 }
