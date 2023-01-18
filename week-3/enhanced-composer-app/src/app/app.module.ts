@@ -20,9 +20,12 @@ import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
 // Import the AboutComponent object from the ./about/about.component.ts file
 import { AboutComponent } from './about/about.component';
-
+// Import the ComposerListComponent object from the ./composer-list/composer-list.component.ts file
 import { ComposerListComponent } from './composer-list/composer-list.component';
+// Import the ComposerDetailsComponent object from the ./composer-details/composer-details.component.ts file
 import { ComposerDetailsComponent } from './composer-details/composer-details.component';
+// Import the RouterModule object from the @angular/router package
+import { RouterModule } from '@angular/router';
 
 // Declare the module
 @NgModule({
@@ -33,7 +36,11 @@ import { ComposerDetailsComponent } from './composer-details/composer-details.co
     ComposerListComponent,
     ComposerDetailsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    RouterModule
+    ],
   providers: [],
   bootstrap: [AppComponent],
 })

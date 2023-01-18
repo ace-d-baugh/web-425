@@ -51,7 +51,7 @@ export class Composer {
         return composer;
       }
     }
-    // return null if no match
+    // if no match, return null
     return null;
   }
 }
