@@ -1,0 +1,14 @@
+/*
+============================================
+, Title: sign-in.component.css
+; Author: Ace Baugh
+; Date: 18 January 2023
+; Description: sign in component css
++===========================================
+*/
+
+.signin-container {
+  width: 35%;
+  margin: 0 auto;
+  margin-top: 10%;
+}
