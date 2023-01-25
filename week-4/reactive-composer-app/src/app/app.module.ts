@@ -26,6 +26,8 @@ import { ComposerListComponent } from './composer-list/composer-list.component';
 import { ComposerDetailsComponent } from './composer-details/composer-details.component';
 // Import the RouterModule object from the @angular/router package
 import { RouterModule } from '@angular/router';
+// Import the FormsModule object from the @angular/forms package
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Declare the module
 @NgModule({
@@ -39,7 +41,9 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule,
     ],
   providers: [],
   bootstrap: [AppComponent],
