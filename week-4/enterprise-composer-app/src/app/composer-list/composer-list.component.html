@@ -29,7 +29,7 @@
         </thead>
         <tbody>
           <!-- loop over composers -->
-          <tr *ngFor="let composer of composers">
+          <tr *ngFor="let composer of composers | async">
             <td scope="row"><a routerLink="/composer-details/{{composer.composerId}}">{{composer.composerId}}</a></td>
             <td scope="row">{{ composer.fullName }}</td>
             <td scope="row">{{ composer.genre }}</td>
