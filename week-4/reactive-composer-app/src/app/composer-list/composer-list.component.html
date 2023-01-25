@@ -11,12 +11,19 @@
   <!-- row of content -->
   <div class="row">
     <div class="col-sm-12">
+
+      <!-- Search bar -->
+      <div class="textSearch">
+        <!-- Search bar input -->
+        <input type="text" id="txtSearch" class="form-control" placeholder="Search by name" [formControl]="txtSearchControl" />
+      </div>
+
       <!-- Table of composers -->
       <table class="table table-dark table-bordered table-hover">
         <thead>
           <tr>
             <th scope="col" class="bg-primary">Composer ID</th>
-            <th scope="col" class="bg-primary">Composer</th>
+            <th scope="col" class="bg-primary">Full Name</th>
             <th scope="col" class="bg-primary">Genre</th>
           </tr>
         </thead>

@@ -6,3 +6,9 @@
 ; Description: CSS for composer list component
 +===========================================
 */
+
+.textSearch {
+  width: 30%;
+  float: right;
+  margin-bottom: 5px;
+}
