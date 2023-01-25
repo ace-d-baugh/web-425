@@ -10,6 +10,7 @@
 import { Injectable } from '@angular/core';
 import { IComposer } from './composer.interface';
 import { Observable, of } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -66,4 +67,19 @@ export class ComposerService {
     // if no match, return null
     return {} as IComposer;
   }
+
+  // filter composers by name
+  filterComposers(name: string): Observable<IComposer[]> {
+    // return filtered composers
+    return of(this.composers).pipe(
+      // map the composers to a new array
+      map((composers) =>
+      // filter the composers by name
+        composers.filter((composer) =>
+          // if the name is found, return the composer (added extra toLowerCase to make it case insensitive)
+          composer.fullName.toLowerCase().indexOf(name.toLowerCase()) > -1)
+        )
+      );
+  }
+
 }

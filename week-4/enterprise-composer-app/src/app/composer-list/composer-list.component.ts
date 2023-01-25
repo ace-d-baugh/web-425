@@ -44,6 +44,7 @@ export class ComposerListComponent implements OnInit {
 
   // filter composers by name
   filterComposers(name: string) {
-    alert(name);
+    // call the filter composers function in the composer service
+    this.composers = this.composerService.filterComposers(name);
   }
 }
