@@ -2,15 +2,15 @@
 ============================================
 , Title: composer-details.component.ts
 ; Author: Ace Baugh
-; Date: 18 January 2023
+; Date: 25 January 2023
 ; Description: Composer details component
 +===========================================
 */
 
 import { Component, OnInit } from '@angular/core';
 import { IComposer } from '../composer.interface';
-import { Composer } from '../composer.class';
 import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-composer-details',
