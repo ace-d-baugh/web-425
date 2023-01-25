@@ -9,6 +9,7 @@
 
 import { Injectable } from '@angular/core';
 import { IComposer } from './composer.interface';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -49,8 +50,8 @@ export class ComposerService {
   }
 
   // get composers
-  getComposers() {
-    return this.composers;
+  getComposers(): Observable<IComposer[]> {
+    return of(this.composers);
   }
 
   // get composer by id
