@@ -10,19 +10,23 @@
 // import component and OnInit from angular core
 import { Component, OnInit } from '@angular/core';
 import { IComposer } from '../composer.interface';
-import { Composer } from '../composer.class';
+import { ComposerService } from '../composer.service';
 
+// create the component
 @Component({
   selector: 'app-composer-list',
   templateUrl: './composer-list.component.html',
   styleUrls: ['./composer-list.component.css'],
 })
+// export the class
 export class ComposerListComponent implements OnInit {
 
   composers: Array<IComposer>;
 
-  constructor() {
-    this.composers = new Composer().getComposers();
+  // inject the composer service
+  constructor(private composerService: ComposerService) {
+    // get the composers from the composer service
+    this.composers = this.composerService.getComposers();
   }
 
   ngOnInit(): void {}
