@@ -1,9 +1,19 @@
+/*
+============================================
+, Title: app-routing.module.ts
+; Author: Ace Baugh
+; Date: 31 January 2023
+; Description: This is the app routing module
++===========================================
+*/
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BookListComponent } from './book-list/book-list.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 
+// This adds the routes to the app routing module
 const routes: Routes = [
   {
     path: '',

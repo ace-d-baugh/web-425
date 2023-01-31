@@ -1,6 +1,15 @@
+/*
+============================================
+, Title: a
+; Author: Ace Baugh
+; Date: 31 January 2023
+; Description: This is the app module file
++===========================================
+*/
+
+// Import statements
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';

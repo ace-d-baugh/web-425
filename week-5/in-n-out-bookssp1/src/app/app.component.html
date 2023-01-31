@@ -1,5 +1,15 @@
+<!--
+================================================
+  Title: app.component.html
+  Author: Ace Baugh
+  Date: 31 January 2023
+  Description: This is the app component html file.
+================================================
+-->
+
 <mat-toolbar class="toolbar">
   <mat-toolbar-row>
+    <!-- Logo -->
     <div class="logo">
       <img
         src="./assets/In-N-Out-Books-Logo.png"
@@ -8,6 +18,7 @@
       />
     </div>
 
+    <!-- Navigation Links -->
     <div style="width: 80%">
       <div fxLayout="row wrap" fxLayoutAlign="end start">
         <button mat-button routerLink="/book-list">Book List</button>
@@ -20,6 +31,7 @@
 
 <br />
 
+<!-- Main Content -->
 <div fxLayout="row wrap">
   <div fxFlex>
     <mat-card class="main-container">
@@ -27,6 +39,7 @@
         {{ assignment }}
       </mat-card-title>
       <mat-card-content>
+        <!-- Router Outlet -->
         <router-outlet></router-outlet>
       </mat-card-content>
     </mat-card>
