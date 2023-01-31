@@ -1,0 +1,34 @@
+<mat-toolbar class="toolbar">
+  <mat-toolbar-row>
+    <div class="logo">
+      <img
+        src="./assets/In-n-Out-Books.png"
+        alt="In-n-Out-Books Logo"
+        height="80"
+      />
+    </div>
+
+    <div style="width: 80%">
+      <div fxLayout="row wrap" fxLayoutAlign="end start">
+        <button mat-button router-link="/book-list">Book List</button>
+        <button mat-button router-link="/contact">Contact</button>
+        <button mat-button router-link="/about">About</button>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<br />
+
+<div fxLayout="row wrap">
+  <div fxFlex>
+    <mat-card class="main-container">
+      <mat-card-title class="blue">
+        {{ assignment }}
+      </mat-card-title>
+      <mat-card-content>
+        <router-outlet></router-outlet>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
