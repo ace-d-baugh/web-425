@@ -31,10 +31,21 @@ body {
   text-align: center;
 }
 
-.card-title-icon, .mat-icon {
+.card-title-icon {
   font-size: 72px;
+
+}
+
+mat-icon {
+  height: 72px !important;
+  width: 72px !important;
+  font-size: 72px !important;
 }
 
 .align-center {
   text-align: center;
+}
+
+.full-width {
+  width: 100%;
 }
