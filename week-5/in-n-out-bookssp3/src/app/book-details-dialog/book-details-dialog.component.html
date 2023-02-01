@@ -7,4 +7,20 @@
 ================================================
 -->
 
-<p>book-details-dialog works!</p>
+<!-- This is the book details dialog pop-up card. -->
+<mat-card>
+  <mat-card-title>{{ book.title }}</mat-card-title>
+  <mat-card-content>
+    <!-- These are the book details -->
+    <div FxLayout="column">
+      <p>ISBN: {{ book.isbn }}</p>
+      <p>Description: {{ book.description }}</p>
+      <p>Number of Pages: {{ book.numOfPages }}</p>
+      <p>Authors: {{ book.authors }}</p>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <!-- This is the close button -->
+    <button mat-raised-button color="accent" matDialogClose="confirm">OK</button>
+  </mat-card-actions>
+</mat-card>

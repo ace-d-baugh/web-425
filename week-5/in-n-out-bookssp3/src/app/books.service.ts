@@ -10,7 +10,6 @@
 import { Injectable } from '@angular/core';
 import { IBook } from './book.interface';
 import { Observable, of } from 'rxjs';
-import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -65,14 +64,13 @@ export class BooksService {
     return of(this.books);
   }
 
-  // This function will return a book based on the isbn
+  // This function will return a book from the array based on the isbn
   getBook(isbn: string): IBook {
     for (let book of this.books) {
       if (book.isbn === isbn) {
         return book;
       }
     }
-    // Not sure if this is the best way to handle this
-    return {} as IBook;
+    return null as any;
   }
 }

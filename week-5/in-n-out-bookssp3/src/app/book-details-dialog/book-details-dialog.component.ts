@@ -7,7 +7,9 @@
 +===========================================
 */
 
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { IBook } from '../book.interface';
 
 @Component({
   selector: 'app-book-details-dialog',
@@ -15,5 +17,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./book-details-dialog.component.scss']
 })
 export class BookDetailsDialogComponent {
+  book: IBook; // Initialize the book variable
+
+  // This is the constructor
+  constructor(public dialogRef: MatDialogRef<BookDetailsDialogComponent>, @Inject(MAT_DIALOG_DATA) public data: any) {
+    // This will be used to store the book details that will be displayed in the dialog
+    this.book = data.book;
+  }
 
 }
