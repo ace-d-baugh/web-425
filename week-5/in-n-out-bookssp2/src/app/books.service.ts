@@ -69,5 +69,7 @@ export class BooksService {
         return book;
       }
     }
+    // Not sure if this is the best way to handle this
+    return {} as IBook;
   }
 }

@@ -7,3 +7,11 @@
 +===========================================
 */
 
+.a-link {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.a-link:hover {
+  text-decoration: underline;
+}
