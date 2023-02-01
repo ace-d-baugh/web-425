@@ -20,6 +20,7 @@ export class BooksService {
   books: Array<IBook>;
 
   constructor() {
+    // This is the books array
     this.books = [
       {
         isbn: `9781592975006`,
@@ -59,10 +60,12 @@ export class BooksService {
     ];
   }
 
+  // This function will return the books array
   getBooks(): Observable<IBook[]> {
     return of(this.books);
   }
 
+  // This function will return a book based on the isbn
   getBook(isbn: string): IBook {
     for (let book of this.books) {
       if (book.isbn === isbn) {

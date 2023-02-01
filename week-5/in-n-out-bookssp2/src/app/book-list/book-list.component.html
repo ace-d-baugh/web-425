@@ -10,10 +10,13 @@
 <div fxLayout="column wrap">
   <h2 fxFlex class="green">Top 5 Favorite Books</h2>
 
+  <!-- This is the table that displays the books -->
   <table style="width: 100%;" fxFlex mat-table [dataSource]="books" class="mat-elevation-z8">
+    <!-- This is the header row -->
     <tr mat-header-row *matHeaderRowDef="header"></tr>
     <tr mat-row *matRowDef="let row; columns: header"></tr>
 
+    <!-- This is the isbn column -->
     <ng-container matColumnDef="isbn">
       <th mat-header-cell *matHeaderCellDef>ISBN</th>
       <td mat-cell *matCellDef="let element">
@@ -23,6 +26,7 @@
       </td>
     </ng-container>
 
+    <!-- This is the title column -->
     <ng-container matColumnDef="title">
       <th mat-header-cell *matHeaderCellDef>Title</th>
       <td mat-cell *matCellDef="let element">
@@ -30,6 +34,7 @@
       </td>
     </ng-container>
 
+    <!-- This is the description column -->
     <ng-container matColumnDef="description">
       <th mat-header-cell *matHeaderCellDef>Description</th>
       <td mat-cell *matCellDef="let element">
@@ -37,6 +42,7 @@
       </td>
     </ng-container>
 
+    <!-- This is the numOfPages column -->
     <ng-container matColumnDef="numOfPages">
       <th mat-header-cell *matHeaderCellDef>Number of Pages</th>
       <td mat-cell *matCellDef="let element">
@@ -44,6 +50,7 @@
       </td>
     </ng-container>
 
+    <!-- This is the authors column -->
     <ng-container matColumnDef="authors">
       <th mat-header-cell *matHeaderCellDef>Authors</th>
       <td mat-cell *matCellDef="let element">
