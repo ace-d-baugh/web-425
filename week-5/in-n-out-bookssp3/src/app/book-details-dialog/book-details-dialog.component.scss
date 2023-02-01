@@ -6,3 +6,9 @@
 ; Description: This is the book-details-dialog.component.scss file for the in-n-out-books app
 +===========================================
 */
+
+mat-card-actions {
+  display: block;
+  text-align: end;
+}
+
