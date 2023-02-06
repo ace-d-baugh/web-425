@@ -2,7 +2,7 @@
 ============================================
 , Title: book-details-dialog.component.ts
 ; Author: Ace Baugh
-; Date: 31 January 2023
+; Date: 6 February 2023
 ; Description: This is the book details dialog component
 +===========================================
 */
