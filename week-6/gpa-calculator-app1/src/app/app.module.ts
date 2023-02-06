@@ -1,3 +1,12 @@
+/*
+============================================
+; Title:  app.module.ts
+; Author: Ace Baugh
+; Date: February 6, 2023
+; Description: This is the app module file
+============================================
+*/
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
