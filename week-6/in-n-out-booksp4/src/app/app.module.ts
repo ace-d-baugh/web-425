@@ -27,6 +27,9 @@ import { BookDetailsDialogComponent } from './book-details-dialog/book-details-d
 import { MatDialogModule } from '@angular/material/dialog';
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { WishlistCreateComponent } from './wishlist-create/wishlist-create.component';
+import { FormsModule } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -50,6 +53,9 @@ import { WishlistCreateComponent } from './wishlist-create/wishlist-create.compo
     MatIconModule,
     MatTableModule,
     MatDialogModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
