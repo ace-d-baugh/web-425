@@ -33,6 +33,8 @@ export class HomeComponent {
     'F',
   ];
 
+  gpaTotal: number = 0;
+
   transcriptEntries: Array<ITranscript> = [];
 
   constructor() {
@@ -42,5 +44,50 @@ export class HomeComponent {
   saveEntry() {
     this.transcriptEntries.push(this.transcriptEntry);
     this.transcriptEntry = {} as ITranscript;
+  }
+
+  calculateResults() {
+    let gpa:number = 0;
+    for (let transcriptEntry of this.transcriptEntries) {
+      switch (this.transcriptEntry.grade) {
+        case 'A':
+          gpa += 4;
+          break;
+        case 'A-':
+          gpa += 3.7;
+          break;
+        case 'B+':
+          gpa += 3.33;
+          break;
+        case 'B':
+          gpa += 3;
+          break;
+        case 'B-':
+          gpa += 2.7;
+          break;
+        case 'C+':
+          gpa += 2.3;
+          break;
+        case 'C':
+          gpa += 2;
+          break;
+        case 'C-':
+          gpa += 1.7;
+          break;
+        case 'D+':
+          gpa += 1.3;
+          break;
+        case 'D':
+          gpa += 1;
+          break;
+        case 'D-':
+          gpa += 0.7;
+          break;
+        case 'F':
+          gpa += 0;
+          break;
+      }
+    }
+    this.gpaTotal = gpa / this.transcriptEntries.length;
   }
 }
