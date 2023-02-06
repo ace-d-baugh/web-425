@@ -7,4 +7,36 @@
   ==========================================================
 -->
 
-<p>base-layout works!</p>
+<mat-toolbar class="toolbar" color="primary">
+  <mat-toolbar-row>
+    <!-- Logo -->
+    <div class="logo">
+      <img src="./assets/gpa-calculator-app.png" alt="logo" height="80" />
+    </div>
+
+    <!-- Navigation Links -->
+    <div style="width: 80%">
+      <div fxLayout="row wrap" fxLayoutAlign="end start">
+        <button mat-button routerLink="/">Home</button>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<br />
+
+<!-- Main Content -->
+<div fxLayout="row wrap">
+  <div fxFlex>
+    <mat-card class="main-container">
+      <mat-card-title class="blue">
+        {{ assignment }}
+      </mat-card-title>
+      <br /><br />
+      <mat-card-content>
+        <!-- Router Outlet -->
+        <router-outlet></router-outlet>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

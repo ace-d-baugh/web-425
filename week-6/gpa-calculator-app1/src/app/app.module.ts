@@ -17,6 +17,10 @@ import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 import { BaseLayoutComponent } from './base-layout/base-layout.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCardModule,
+    MatToolbarModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
