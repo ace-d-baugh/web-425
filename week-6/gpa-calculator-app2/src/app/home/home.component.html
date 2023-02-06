@@ -7,28 +7,29 @@
   ==========================================================
 -->
 
-<div fxLayout="row wrap" fxLayoutGap="20px">
+<div fxLayout='row wrap' fxLayoutGap='20px'>
   <!-- Grade form -->
-  <div class="grade-form" fxFlex>
+  <div class='grade-form' fxFlex>
     <mat-card>
       <mat-card-title>Grade Entry</mat-card-title>
       <mat-card-content>
-        <form fxLayout="column" fxLayoutGap="16px">
+        <form fxLayout='column' fxLayoutGap='16px'>
           <mat-form-field fxFlex>
             <mat-label>Course</mat-label>
             <input
               matInput
-              [(ngModel)]="transcriptEntry.course"
-              id="txtCourse"
-              name="txtCourse"
+              [(ngModel)]='transcriptEntry.course'
+              id='txtCourse'
+              name='txtCourse'
             />
           </mat-form-field>
           <mat-form-field fxFlex>
             <mat-label>Grade</mat-label>
-            <mat-select [(ngModel)]="transcriptEntry.grade" name="selectGrade">
+            <mat-select [(ngModel)]='transcriptEntry.grade' name='selectGrade'>
+              <!-- Loop through the selectable grades -->
               <mat-option
-                *ngFor="let grade of selectableGrades"
-                [value]="grade"
+                *ngFor='let grade of selectableGrades'
+                [value]='grade'
                 >{{ grade }}</mat-option
               >
             </mat-select>
@@ -36,27 +37,28 @@
         </form>
         <button
           mat-raised-button
-          color="primary"
-          id="btnSave"
-          (click)="saveEntry()"
+          color='primary'
+          id='btnSave'
+          (click)='saveEntry()'
         >
           Save
         </button>
       </mat-card-content>
     </mat-card>
   </div>
-  <!-- right side -->
-  <div fxFlex class="grade-summary">
-    <!-- <button mat-raised-button color="primary" (click)="clearEntries()">
+  <!-- Grade Summary -->
+  <div fxFlex class='grade-summary'>
+    <button mat-button color='primary' (click)='clearEntries()'>
       Clear Entries
-    </button> -->
+    </button>
     <mat-card>
       <mat-card-title>Transcript</mat-card-title>
       <mat-card-content>
+        <!-- Loop through the transcript entries -->
         <app-grade-summary
-          *ngFor="let entry of transcriptEntries"
-          [course]="entry.course"
-          [grade]="entry.grade"
+          *ngFor='let entry of transcriptEntries'
+          [course]='entry.course'
+          [grade]='entry.grade'
         ></app-grade-summary>
       </mat-card-content>
     </mat-card>
@@ -65,8 +67,12 @@
 
 <br /><br />
 
-<div fxLayout="column" fxLayoutGap="20px">
-  <div fxFlex class="gpa">
-    <app-gpa></app-gpa>
+<!-- GPA -->
+<div fxLayout='column' fxLayoutGap='20px'>
+  <div fxFlex class='gpa'>
+    <button mat-button color='primary' (click)='calculateResults()'>Calculate GPA</button>
+    <mat-card class='mat-elevation-z8'>
+      <mat-card-title style='text-align: center;'>GPA:<app-gpa [gpaTotal]='gpaTotal'></app-gpa></mat-card-title>
+    </mat-card>
   </div>
 </div>

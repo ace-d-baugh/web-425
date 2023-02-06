@@ -15,6 +15,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./grade-summary.component.scss'],
 })
 export class GradeSummaryComponent {
+  // This is the input for the grade
   @Input() grade: string = '';
   @Input() course: string = '';
 

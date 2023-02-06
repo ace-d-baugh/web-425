@@ -7,11 +7,15 @@
 ============================================
 */
 
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-gpa',
   templateUrl: './gpa.component.html',
   styleUrls: ['./gpa.component.scss'],
 })
-export class GpaComponent {}
+export class GpaComponent {
+  @Input() gpaTotal: number = 0;
+
+  constructor() { }
+}

@@ -18,6 +18,7 @@ import { ITranscript } from '../transcript.interface';
 export class HomeComponent {
   transcriptEntry: ITranscript;
 
+  // This is the array of grades
   selectableGrades: Array<string> = [
     'A',
     'A-',
@@ -41,15 +42,17 @@ export class HomeComponent {
     this.transcriptEntry = {} as ITranscript;
   }
 
+  // This is the function that saves the entry
   saveEntry() {
     this.transcriptEntries.push(this.transcriptEntry);
     this.transcriptEntry = {} as ITranscript;
   }
 
+  // This is the function that calculates the GPA
   calculateResults() {
     let gpa:number = 0;
     for (let transcriptEntry of this.transcriptEntries) {
-      switch (this.transcriptEntry.grade) {
+      switch (transcriptEntry.grade) {
         case 'A':
           gpa += 4;
           break;
@@ -89,5 +92,11 @@ export class HomeComponent {
       }
     }
     this.gpaTotal = gpa / this.transcriptEntries.length;
+  }
+
+  // This is the function that clears the entries
+  clearEntries() {
+    this.transcriptEntries = [];
+    this.gpaTotal = 0;
   }
 }
