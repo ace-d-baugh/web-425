@@ -7,11 +7,16 @@
 ============================================
 */
 
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-grade-summary',
   templateUrl: './grade-summary.component.html',
   styleUrls: ['./grade-summary.component.scss'],
 })
-export class GradeSummaryComponent {}
+export class GradeSummaryComponent {
+  @Input() grade: string = '';
+  @Input() course: string = '';
+
+  constructor() { }
+}
