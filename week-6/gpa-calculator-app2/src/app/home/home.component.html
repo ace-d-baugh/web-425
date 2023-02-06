@@ -7,4 +7,37 @@
   ==========================================================
 -->
 
-<p>home works!</p>
+<div fxLayout="row" fxLayoutAlign="space-between center">
+  <!-- Grade form -->
+  <div fxFlex="50">
+    <mat-card>
+      <mat-card-title>Grade Entry</mat-card-title>
+    </mat-card>
+  </div>
+  <!-- right side -->
+  <div fxFlex="50">
+    <mat-card>
+      <mat-card-title>Transcript</mat-card-title>
+      <mat-card-content>
+        <app-grade-summary></app-grade-summary>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<div fxLayout=”row wrap” fxLayoutGap=”20px”>
+  <div fxFlex class=”grade-form”></div>
+  <div fxFlex class=”grade-summary”>
+    <app-grade-summary></app-grade-summary>
+  </div>
+</div>
+<br />
+<div fxLayout=”column” fxLayoutGap=”20px”>
+  <div fxFlex class=”gpa”>
+    <app-gpa></app-gpa>
+  </div>
+</div>
+
+
+
+

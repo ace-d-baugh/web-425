@@ -18,6 +18,6 @@ export class BaseLayoutComponent {
   assignment: string;
   // This adds the assignment string to the app component
   constructor() {
-    this.assignment = 'Exercise 6.3 - Layouts';
+    this.assignment = 'Exercise 6.4 - Input Properties';
   }
 }
