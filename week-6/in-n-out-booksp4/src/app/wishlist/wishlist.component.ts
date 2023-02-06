@@ -8,6 +8,7 @@
 */
 
 import { Component } from '@angular/core';
+import { IWishlistItem } from '../wishlist-item.interface';
 
 @Component({
   selector: 'app-wishlist',
@@ -15,5 +16,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./wishlist.component.scss']
 })
 export class WishlistComponent {
+
+  items: Array<IWishlistItem> = [];
+
+  constructor() { }
+
+    updateItemsHandler(item: IWishlistItem) {
+      this.items.push(item);
+    }
 
 }
