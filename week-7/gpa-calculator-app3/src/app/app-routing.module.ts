@@ -13,6 +13,7 @@ import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 import { BaseLayoutComponent } from './base-layout/base-layout.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,10 @@ const routes: Routes = [
     path: 'session',
     component: AuthLayoutComponent,
     children: [
+      {
+        path: 'sign-in',
+        component: SignInComponent,
+      },
       {
         path: 'not-found',
         component: NotFoundComponent,
