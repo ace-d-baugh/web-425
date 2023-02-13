@@ -29,6 +29,7 @@ import { MatListModule } from '@angular/material/list';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { CookieService } from 'ngx-cookie-service';
 
 
 

@@ -8,6 +8,8 @@
 */
 
 import { Component } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service'; // do I need /public-api?
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-base-layout',
@@ -17,7 +19,14 @@ import { Component } from '@angular/core';
 export class BaseLayoutComponent {
   assignment: string;
   // This adds the assignment string to the app component
-  constructor() {
+  constructor(private cookieService: CookieService, private router: Router) {
     this.assignment = 'Exercise 7.2 - Reactive Forms';
+  }
+
+  // This is the sign out function
+  signOut() {
+    console.log('Signing out...');
+    this.cookieService.deleteAll();
+    this.router.navigate(['/session/sign-in']);
   }
 }
