@@ -7,17 +7,16 @@
 ============================================
 */
 
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ITranscript } from '../transcript.interface';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent {
-  transcriptEntry: ITranscript;
-
+export class HomeComponent implements OnInit {
   // This is the array of grades
   selectableGrades: Array<string> = [
     'A',
@@ -36,23 +35,38 @@ export class HomeComponent {
 
   gpaTotal: number = 0;
 
+  transcriptForm: FormGroup = new FormGroup({});
+
   transcriptEntries: Array<ITranscript> = [];
 
-  constructor() {
-    this.transcriptEntry = {} as ITranscript;
+  constructor(private fb: FormBuilder) {}
+
+  ngOnInit(): void {
+    this.transcriptForm = this.fb.group({
+      course: ['', Validators.required],
+      grade: ['', Validators.required],
+    });
+  }
+
+  get form() {
+    return this.transcriptForm.controls;
   }
 
   // This is the function that saves the entry
-  saveEntry() {
-    this.transcriptEntries.push(this.transcriptEntry);
-    this.transcriptEntry = {} as ITranscript;
+  onSubmit(event: any) {
+    this.transcriptEntries.push({
+      course: (this.form as any).course.value,
+      grade: (this.form as any).grade.value,
+    });
+
+    event.currentTarget.reset();
   }
 
   // This is the function that calculates the GPA
   calculateResults() {
-    let gpa:number = 0;
+    let gpa: number = 0;
     for (let transcriptEntry of this.transcriptEntries) {
-      switch (transcriptEntry.grade) {
+      switch ((transcriptEntry as any).grade) {
         case 'A':
           gpa += 4;
           break;
