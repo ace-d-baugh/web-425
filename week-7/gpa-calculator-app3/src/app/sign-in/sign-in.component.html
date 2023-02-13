@@ -10,7 +10,7 @@
 <div fxLayout="column">
   <div fxFlex>
     <mat-card class="mat-elevation-z8 signin-container">
-      <mat-card-title>Student Sign In </mat-card-title>
+      <mat-card-title>Student Sign In</mat-card-title>
 
       <mat-card-subtitle>
         You must enter a valid student ID to proceed.
@@ -28,9 +28,10 @@
           >
             <mat-card-content>
               <mat-form-field fxFlex appearance="fill">
-                <mat-label for="txtStudentId" id="lblStudentId"
-                  >Student ID</mat-label
-                >
+                <mat-label for="txtStudentId" id="lblStudentId">
+                  Student ID
+                </mat-label>
+
                 <input
                   type="text"
                   matInput
@@ -43,6 +44,7 @@
             </mat-card-content>
 
             <mat-card-actions>
+              <!-- Submit button  with added disable for empty input-->
               <button
                 mat-raised-button
                 fxFlex

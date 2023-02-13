@@ -15,10 +15,12 @@ import { Injectable } from '@angular/core';
 export class SignInService {
   studentIds: Array<number>;
   constructor() {
+    // This is the array of student IDs
     this.studentIds = [1007, 1008, 1009, 1010, 1011, 1012];
   }
 
   validate(studentId: number) {
+    // This validates the student ID
     return this.studentIds.some((id) => id === studentId);
   }
 }

@@ -25,8 +25,9 @@ export class BaseLayoutComponent {
 
   // This is the sign out function
   signOut() {
-    console.log('Signing out...');
+    // This deletes the cookie
     this.cookieService.deleteAll();
+    // This navigates to the sign in page
     this.router.navigate(['/session/sign-in']);
   }
 }

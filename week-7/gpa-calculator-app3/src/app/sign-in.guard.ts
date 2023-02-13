@@ -24,6 +24,7 @@ import { CookieService } from 'ngx-cookie-service';
 export class SignInGuard implements CanActivate {
   constructor(private router: Router, private cookieService: CookieService) {}
 
+  // This is the sign in guard
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
@@ -32,11 +33,16 @@ export class SignInGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
+
+    // This checks to see if the cookie exists
     const sessionUser = this.cookieService.get('session_user');
 
+    // This returns true if the cookie exists
     if (sessionUser) {
       return true;
-    } else {
+    }
+    // This returns false if the cookie does not exist and navigates to the sign in page
+    else {
       this.router.navigate(['/session/sign-in']);
       return false;
     }
